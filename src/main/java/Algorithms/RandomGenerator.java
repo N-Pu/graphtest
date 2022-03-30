@@ -7,10 +7,18 @@ import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.AbstractGraph;
 import org.graphstream.graph.implementations.SingleGraph;
 
+import java.util.Map;
+import java.util.Vector;
+
 public class RandomGenerator {
+    // here's our vector with used nodes.
+    // it helps when we are checking paths
+    // in our graph
+    private Vector<Integer> usedNodes = new Vector<>();
+
     public void Random() {
         AbstractGraph graph = new SingleGraph("Random Graph");
-        Generator gen = new org.graphstream.algorithm.generator.RandomGenerator(2);
+        Generator gen = new org.graphstream.algorithm.generator.RandomGenerator(3);
         Property prop = new Property();
         Style s = new Style();
 
@@ -26,7 +34,7 @@ public class RandomGenerator {
             node.setAttribute("ui.label", node.getId());
         }
 
-        for ( Edge edge: graph.getEachEdge()){
+        for (Edge edge : graph.getEachEdge()) {
             edge.setAttribute("ui.label", edge.getId());
         }
 
@@ -34,5 +42,13 @@ public class RandomGenerator {
         graph.display();
     }
 
+    public boolean isNotEmpty(Integer id) {
+        for (int i = 0; i < usedNodes.size(); i++) {
+            if (id.equals(usedNodes.get(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
