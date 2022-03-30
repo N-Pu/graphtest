@@ -42,6 +42,7 @@ public class RandomGenerator {
         graph.display();
     }
 
+    // checker for empty node in graph
     public boolean isNotEmpty(Integer id) {
         for (int i = 0; i < usedNodes.size(); i++) {
             if (id.equals(usedNodes.get(i))) {
