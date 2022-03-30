@@ -10,7 +10,7 @@ import org.graphstream.graph.implementations.SingleGraph;
 public class RandomGenerator {
     public void Random() {
         AbstractGraph graph = new SingleGraph("Random Graph");
-        Generator gen = new org.graphstream.algorithm.generator.RandomGenerator(3);
+        Generator gen = new org.graphstream.algorithm.generator.RandomGenerator(2);
         Property prop = new Property();
         Style s = new Style();
 
@@ -33,4 +33,6 @@ public class RandomGenerator {
         gen.end();
         graph.display();
     }
+
+
 }
