@@ -11,7 +11,7 @@ import scala.util.parsing.combinator.testing.Str;
 import java.util.Map;
 import java.util.Vector;
 
-public class RandomGenerator {
+public class RandGenerator {
     // here's our vector with used nodes.
     // it helps when we are checking paths
     // in our graph
@@ -22,6 +22,17 @@ public class RandomGenerator {
     private Style s = new Style();
 
     public void Random() {
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
+        usedNodes.add(" _ ");
 
         prop.setProp();
         graph.setAttribute("ui.stylesheet", s.getStyleSheet());
@@ -42,6 +53,9 @@ public class RandomGenerator {
         }
 
         gen.end();
+//        rg.pathSearcher(graph);
+//        System.out.println(usedNodes);
+
         graph.display();
     }
 
@@ -51,6 +65,7 @@ public class RandomGenerator {
             if (id.equals(usedNodes.get(i))) {
                 return false;
             }
+
         }
         return true;
     }
@@ -58,12 +73,13 @@ public class RandomGenerator {
     public void pathSearcher() {
         int i = 0;
         for (Node node : graph) {
-            Object getEE = node.getEachEnteringEdge();
+//            Object getEE = node.getEachEnteringEdge();
 
             if (isNotEmpty(node.getId())) {
                 usedNodes.set(i, node.getId());
                 s.getStyleEdge();
                 node.getNeighborNodeIterator();
+                System.out.println(usedNodes);
 
 
             }
