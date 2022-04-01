@@ -22,17 +22,17 @@ public class RandGenerator {
     private Style s = new Style();
 
     public void Random() {
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
-        usedNodes.add(" _ ");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+        usedNodes.add("_");
+//        usedNodes.add(" _ ");
 
         prop.setProp();
         graph.setAttribute("ui.stylesheet", s.getStyleSheet());
