@@ -32,6 +32,7 @@ public class RandGenerator {
         usedNodes.add("_");
         usedNodes.add("_");
         usedNodes.add("_");
+
 //        usedNodes.add(" _ ");
 
         prop.setProp();
