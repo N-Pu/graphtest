@@ -1,4 +1,5 @@
 import Algorithms.RandGenerator;
+import TryKotlin.KotlinClass;
 
 public class MainClass {
     public static void main(String[] args) {
@@ -10,6 +11,9 @@ public class MainClass {
 
 //        MainClass mainClass = new MainClass();
 //        mainClass.b();
+
+        KotlinClass kotlinClass = new KotlinClass();
+        kotlinClass.m();
     }
 
 
